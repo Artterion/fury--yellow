@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Snuzzle’s Sweet Adventure</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #fef6e4;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    #snuzzle {
+      position: absolute;
+      bottom: 20px;
+      left: -150px;
+      width: 120px;
+      transition: left 3s ease-in-out;
+    }
+    #cart {
+      position: absolute;
+      bottom: 20px;
+      right: 50px;
+      width: 140px;
+    }
+    #message {
+      position: absolute;
+      top: 40px;
+      width: 100%;
+      text-align: center;
+      font-size: 1.5em;
+      color: #222;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="message">Snuzzle got his sweets!</div>
+  <img id="snuzzle" src="https://copilot.microsoft.com/th/id/BCO.17c17391-30ee-4f1b-addd-f276c23d51f7.png" alt="Snuzzle">
+  <img id="cart" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Candy_cart.svg/512px-Candy_cart.svg.png" alt="Candy Cart">
+
+  <script>
+    window.onload = () => {
+      const snuzzle = document.getElementById('snuzzle');
+      const message = document.getElementById('message');
+
+      // Animate Snuzzle walking in
+      setTimeout(() => {
+        snuzzle.style.left = 'calc(100% - 200px)';
+      }, 500);
+
+      // Show message after walk
+      setTimeout(() => {
+        message.style.opacity = 1;
+      }, 3500);
+    };
+  </script>
+
+</body>
+</html>
